@@ -17,7 +17,7 @@ class CharacterTpl : public Character{
         // Copy Constructor
         CharacterTpl(const CharacterTpl& other) : Character(other.getName().c_str()), m_healthMax(other.m_healthMax)
         {
-            m_health = (int)other.m_healthMax;
+            m_health = (int) other.m_healthMax;
         }
 
         void takeDamage(int dmg) override

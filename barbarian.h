@@ -11,7 +11,7 @@ class Barbarian: public CharacterTpl<T>{
     int m_baseDefense{};
 
     Ability_t m_ability{};
-    Weapon_t m_weapon[2];
+    Weapon_t m_weapon[2]{};
     public:
 
     Barbarian(const char* name, int healthMax, int baseAttack, int baseDefense, Weapon_t primaryWeapon, Weapon_t secondaryWeapon):CharacterTpl<T>(name, healthMax), m_baseAttack(baseAttack), m_baseDefense(baseDefense)

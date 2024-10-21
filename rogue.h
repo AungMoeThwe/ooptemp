@@ -12,7 +12,7 @@ class Rogue : public CharacterTpl<T> {
     FirstAbility_t m_firstAbility{};
     SecondAbility_t m_secondAbility{};
 
-    seneca::Dagger m_weapon;
+    seneca::Dagger m_weapon{};
 
 public:
     Rogue(const char* name, int healthMax, int baseAttack, int baseDefense):CharacterTpl<T>(name, healthMax), m_baseAttack(baseAttack), m_baseDefense(baseDefense) {}

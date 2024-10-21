@@ -8,8 +8,8 @@ namespace seneca {
 
 class Team {
     size_t m_capacity = 0, m_size = 0;
-    std::string m_name;
-    Character **m_characters;
+    std::string m_name{};
+    Character **m_characters{};
 
     void resize();
     public:
