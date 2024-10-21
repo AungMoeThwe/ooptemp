@@ -31,7 +31,7 @@ namespace seneca {
         m_characters = new Character * [m_capacity];
         for (size_t i = 0; i < m_size; i++)
         {
-            m_characters[i] = other.m_characters[i]->clone();
+            m_characters[i] = other.m_characters[i];
         }
     }
 
@@ -39,6 +39,7 @@ namespace seneca {
     {
         if (this != &other)
         {
+
             delete[] m_characters; // need to look at this
             m_name = other.m_name;
             m_size = other.m_size;
@@ -46,7 +47,7 @@ namespace seneca {
             m_characters = new Character * [m_capacity];
             for (size_t i = 0; i < m_size; i++)
             {
-                m_characters[i] = other.m_characters[i]->clone();
+                m_characters[i] = other.m_characters[i];
             }
         }
         return *this;
