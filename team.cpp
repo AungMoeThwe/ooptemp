@@ -98,9 +98,11 @@ namespace seneca {
     {
         if (m_characters != nullptr)
         {
-            
-            delete[] m_characters;
+            for (size_t i = 0; i < m_size; ++i)
+            delete m_characters[i];
         }
+        delete[] m_characters;
+
 
     }
 
