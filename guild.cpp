@@ -104,7 +104,7 @@ namespace seneca {
         {
             if (m_characters[i]->getName() == c->getName())
             {
-                return; // Do not add if name exists
+                return;
             }
         }
         // Resize the array if needed
@@ -116,7 +116,7 @@ namespace seneca {
         c->setHealthMax(c->getHealthMax() + 300);
         c->setHealth(c->getHealthMax());
 
-        // Add the new member (clone the character)
+
         m_characters[m_size++] = c;
     }
 

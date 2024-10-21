@@ -11,13 +11,13 @@ class CharacterTpl : public Character{
     public:
         CharacterTpl(const char* name, int healthMax): Character(name), m_healthMax(healthMax)
         {
-            m_health =(int) m_healthMax;
+            m_health =static_cast<int>(m_healthMax);
         }
 
         // Copy Constructor
         CharacterTpl(const CharacterTpl& other) : Character(other.getName().c_str()), m_healthMax(other.m_healthMax)
         {
-            m_health = (int) other.m_healthMax;
+            m_health = static_cast<int>(other.m_healthMax);
         }
 
         void takeDamage(int dmg) override

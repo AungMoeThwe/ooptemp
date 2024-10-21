@@ -8,7 +8,6 @@ using namespace std;
 namespace seneca {
     void Team::resize()
     {
-        // Resize function (doubles the capacity when needed)
         size_t newCapacity = (m_capacity == 0) ? 1 : m_capacity * 2;
         Character** newMembers = new Character * [newCapacity];
         for (size_t i = 0; i < m_size; ++i)
@@ -116,12 +115,10 @@ namespace seneca {
                 return;
             }
         }
-        // Resize the array if needed
         if (m_size == m_capacity)
         {
             resize();
         }
-        // Add the new member (clone the character)
         m_characters[m_size++] = c->clone();
     }
 
