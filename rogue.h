@@ -9,8 +9,8 @@ class Rogue : public CharacterTpl<T> {
     int m_baseAttack{};
     int m_baseDefense{};
 
-    FirstAbility_t m_firstAbility;
-    SecondAbility_t m_secondAbility;
+    FirstAbility_t m_firstAbility{};
+    SecondAbility_t m_secondAbility{};
 
     seneca::Dagger m_weapon;
 

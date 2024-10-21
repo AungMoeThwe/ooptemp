@@ -11,7 +11,7 @@ class Archer :public CharacterTpl<seneca::SuperHealth>{
     int m_baseAttack{};
     int m_baseDefense{};
 
-    Weapon_t m_weapon;
+    Weapon_t m_weapon{};
     public:
 
     Archer(const char* name, int healthMax, int baseAttack, int baseDefense, Weapon_t weapon) : CharacterTpl<seneca::SuperHealth>(name, healthMax), m_baseAttack(baseAttack),
